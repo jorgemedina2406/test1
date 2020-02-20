@@ -5,6 +5,8 @@ const app = express();
 
 const bodyParser = require('body-parser');
 
+const port = proccess.env.PORT || 3000;
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -40,6 +42,6 @@ app.post('/zone', (req, res) => {
     res.json('post users');
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Escuchando el puerto 3000');
 });
