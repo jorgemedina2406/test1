@@ -1,7 +1,10 @@
 const express = require('express');
-var moment = require('moment');
+const moment = require('moment');
+const cors = require('cors')
 
 const app = express();
+
+app.use(cors())
 
 const bodyParser = require('body-parser');
 
